@@ -1,0 +1,28 @@
+{
+  "name": "staticpug",
+  "version": "1.0.0",
+  "description": "the clean static HTML generator from HAML files using pug rendering the templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "bin": {
+    "sp-init": "bin/init.js",
+    "sp-execute": "bin/execute.js",
+    "sp-create": "bin/create.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easa/staticpug.git"
+  },
+  "keywords": [
+    "static site generator",
+    "html generator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easa/staticpug/issues"
+  },
+  "homepage": "https://github.com/easa/staticpug#readme"
+}
