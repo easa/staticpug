@@ -1,4 +1,5 @@
-/** Pass this to any catch function */
-module.exports = (...errors) => {
-  console.log(...errors)
-}
+const errorHandle = require('../../../lib/common/errorHandle');
+
+test('Should return currect objects', () => {
+  expect(typeof errorHandle).toBe('function')
+})
