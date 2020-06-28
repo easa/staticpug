@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const path = require('path')
 const lib = require('./lib')
 const process = require('process')
