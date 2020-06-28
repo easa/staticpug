@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const path = require('path')
-const lib = require('./lib')
+const { copyStatics, renderHTMLs } = require('../index')
 const process = require('process')
 console.log(__dirname, process)
 const pubdir = path.join(__dirname, 'public')
@@ -12,8 +12,8 @@ const whatDate = (date = new Date()) =>
 async function main() {
   console.log(`It Started On ${whatDate()}`)
   await Promise.all([
-    lib.copyStatics(pubdir, dstdir),
-    lib.renderHTMLs(srcdir, dstdir),
+    copyStatics(pubdir, dstdir),
+    renderHTMLs(srcdir, dstdir),
     // lib.renderJavascrtips(srcdir, dstdir),
     // lib.renderSasses(srcdir, dstdir)
   ]).catch(error => {
