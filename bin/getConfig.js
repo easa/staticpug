@@ -10,11 +10,12 @@ module.exports = function (argv) {
 
   Array('staticpug.config.json', 'staticpug.json', 'staticpug.config').forEach(i => {
     const tempConfigPath = path.join(basePath, i)
-    if (!config && fs.existsSync(tempConfigPath))
-      config = require(tempConfigPath)
+    if (config && !fs.existsSync(tempConfigPath)) return;
+    config = JSON.parse(fs.readFileSync(tempConfigPath, 'utf-8'))
   })
-  if (!config && fs.existsSync(path.join(basePath, 'package.json'))) {
-    const packagejson = require(path.join(basePath, 'package.json'))
+  const packagejsonPath = path.join(basePath, 'package.json')
+  if (!config && fs.existsSync(packagejsonPath)) {
+    const packagejson = JSON.parse(fs.readFileSync(packagejsonPath), 'utf-8')
     config = packagejson['staticpug']
   }
   if (!config)
@@ -22,6 +23,11 @@ module.exports = function (argv) {
   Object.keys(defaults).forEach(i => {
     if (!config[i])
       config[i] = defaults[i]
+  })
+
+  Object.keys(config).forEach(i => {
+    if (path.isAbsolute(config[i])) return;
+    config[i] = path.join(basePath, config[i])
   })
   return config
 }
