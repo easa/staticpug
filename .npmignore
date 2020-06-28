@@ -1,4 +1,5 @@
 node_module
 test
+__mocks__
 *.test.js
 .*

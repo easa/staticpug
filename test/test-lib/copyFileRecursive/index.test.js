@@ -1,27 +1,25 @@
 'use strict'
 
-const index = require('../../../lib/copyFileRecursive/index')
-import { resetModal } from '../myFunctions.js';
-import clearSomethingInModal from 'clearSomethingInModal';
+const copyfiles = require('../../../lib/copyFileRecursive/index')
 jest.mock('fs')
-jest.mock('clearSomethingInModal', () => jest.fn())
+// jest.mock(copyfiles, () => jest.fn())
 
 test('Should return currect objects', () => {
-  expect(typeof index).toBe('function')
+  expect(typeof copyfiles).toBe('function')
 })
 
 test('Should call -- once', () => { })
 test('Should call fs.createfile once', () => { })
 
 describe('recursive copy', () => {
-  it('calls itself once', () => {
-    resetCreationModal();
-    expect(clearSomethingInModal.mock.calls.length).toBe(1);
-  })
-  it('calls copy file of fs twice', () => {
-    resetCreationModal();
-    expect(clearSomethingInModal.mock.calls.length).toBe(1);
-  })
+  // it('calls itself once', () => {
+  //   resetCreationModal();
+  //   expect(copyfiles.mock.calls.length).toBe(1);
+  // })
+  // it('calls copy file of fs twice', () => {
+  //   resetCreationModal();
+  //   expect(copyfiles.mock.calls.length).toBe(1);
+  // })
 })
 
 describe('listFilesInDirectorySync', () => {
@@ -36,11 +34,11 @@ describe('listFilesInDirectorySync', () => {
   })
 
   test('includes all files in the directory in the summary', () => {
-    const FileSummarizer = require('../FileSummarizer')
-    const fileSummary = FileSummarizer.summarizeFilesInDirectorySync(
-      '/path/to',
-    )
+    // const FileSummarizer = require('../FileSummarizer')
+    // const fileSummary = FileSummarizer.summarizeFilesInDirectorySync(
+    //   '/path/to',
+    // )
 
-    expect(fileSummary.length).toBe(2)
+    // expect(fileSummary.length).toBe(2)
   })
 })
