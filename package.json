@@ -7,9 +7,9 @@
     "test": "jest"
   },
   "bin": {
-    "sp-init": "node bin/init.js",
-    "sp-execute": "node bin/execute.js",
-    "sp-create": "node bin/create.js"
+    "sp-init": "bin/init.js",
+    "sp-execute": "bin/execute.js",
+    "sp-create": "bin/create.js"
   },
   "repository": {
     "type": "git",
