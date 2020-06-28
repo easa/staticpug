@@ -1,0 +1,5 @@
+{
+  "staticFilesDirectory": "static",
+  "destinationDirectory": "dest",
+  "sourceDirectory": "src"
+}
