@@ -26,8 +26,13 @@ module.exports = function (argv) {
   })
 
   Object.keys(config).forEach(i => {
-    if (path.isAbsolute(config[i])) return;
-    config[i] = path.join(basePath, config[i])
+    let value = config[i]
+    if (typeof value === 'string') {
+      config[i] = path.isAbsolute(value) ? [value] : [path.join(basePath, value)]
+    }
+    else if (typeof value.map === 'function') {
+      config[i] = value.map(j => path.isAbsolute(j) ? j : path.join(basePath, j))
+    }
   })
   return config
 }
