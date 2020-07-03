@@ -1,6 +1,6 @@
 {
   "name": "staticpug",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "the clean static HTML generator from HAML files using pug rendering the templates",
   "main": "index.js",
   "scripts": {
