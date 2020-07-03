@@ -10,10 +10,17 @@ The clean static HTML generator from HAML files using pug rendering the template
 
 ## Table of content
 
+- [Notice](#notice)
 - [Commands](#commands)
   - [`npx sp-init`](#sp-init)
   - [`npx sp-build`](#sp-build)
 - [How it works](#How-it-works)
+
+## notice
+VERY CASE SENSITIVE
+* file names
+* variables names
+* everything 
 
 ## Commands
 
