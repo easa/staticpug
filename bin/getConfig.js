@@ -4,8 +4,8 @@ const defaults = require('./defaultConfig.json')
 
 module.exports = function (argv) {
   const thisPath = argv[1];
-  const node_modulesPath = /^(.*)node_modules/.exec(thisPath)[1]
-  const basePath = !node_modulesPath ? __dirname : node_modulesPath
+  const node_modulesPath = /^(.*)node_modules/.exec(thisPath) || []
+  const basePath = node_modulesPath[1] || __dirname
   let config = undefined;
 
   Array('staticpug.config.json', 'staticpug.json', 'staticpug.config').forEach(i => {

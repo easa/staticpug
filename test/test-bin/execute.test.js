@@ -1,4 +1,4 @@
-const executableURL = '../../bin/execute'
+const executableURL = 'node bin/execute'
 const fs = require('fs')
 const path = require('path')
 var exec = require('child_process').exec
