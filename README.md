@@ -14,10 +14,11 @@ The clean static HTML generator from HAML files using pug rendering the template
 - [Commands](#commands)
   - [`npx sp-init`](#sp-init)
   - [`npx sp-build`](#sp-build)
-- [How it works](#How-it-works)
+- [How it works](#how-it-works)
+- [Contribute](#contribute)
 
 ## notice
-VERY CASE SENSITIVE
+VERY CASE SENSITIVE, this is a file-template base HTML generator and is sensitive to folder structure and and case sensitive! 
 * file names
 * variables names
 * everything 
