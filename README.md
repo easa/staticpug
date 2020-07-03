@@ -12,8 +12,7 @@ The clean static HTML generator from HAML files using pug rendering the template
 
 - [Commands](#commands)
   - [`npx sp-init`](#sp-init)
-  - [`npx sp-execute`](#sp-execute)
-  - [`npx sp-create`](#sp-create)
+  - [`npx sp-build`](#sp-build)
 - [How it works](#How-it-works)
 
 ## Commands
@@ -24,8 +23,8 @@ OR ` sp-create`. Creates a simple sample project to help you make your own websi
 - `public/`
 - `staticpug.config.json`
 
-### `sp-execute`
-OR `sp-build`. Builds the website by copying all files from public folder to destination 
+### `sp-build`
+OR `sp-execute`. Builds the website by copying all files from public folder to destination 
 and make HTML files from pug templates provided inside the source folder  
 Read options from one of `staticpug.config.json`, `staticpug.json`, `staticpug.config` file 
 or at `staticpug` secton on `package.json` file
