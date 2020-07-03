@@ -1,0 +1,47 @@
+{
+  "companyName": "StaticPug",
+  "title": "Home Page",
+  "author": "Easa",
+  "year": "2020",
+  "keywords": "staticpug, template, static-site-generator",
+  "npmlink": "https://npmjs.com/package/staticpug",
+  "authergithubprofile": "https://github.com/easa",
+  "cards": [
+    {
+      "title": "Free",
+      "value": "$0",
+      "features": [
+        "10 users included",
+        "2 GB of storage",
+        "Email support",
+        "Help center access"
+      ],
+      "actionclass": "btn-outline-primary",
+      "action": "Sign up for free"
+    },
+    {
+      "title": "Enterprise",
+      "value": "$15 ",
+      "features": [
+        "20 users included",
+        "10 GB of storage",
+        "Priority email support",
+        "Help center access"
+      ],
+      "actionclass": "btn-primary",
+      "action": "Get started"
+    },
+    {
+      "title": "Enterprise",
+      "value": "$29 ",
+      "features": [
+        "li 30 users included",
+        "li 15 GB of storage",
+        "li Phone and email support",
+        "li Help center access"
+      ],
+      "actionclass": "btn-primary",
+      "action": "Contact us"
+    }
+  ]
+}

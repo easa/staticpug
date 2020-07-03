@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    block meta
+      meta(charset='utf-8')
+      meta(name=title, content=title)
+      meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+      meta(name='description', content=description)
+      meta(name='keywords', content=keywords)
+      meta(name='author', content=author)
+
+    block style
+      link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css", integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk", crossorigin="anonymous")
+      link(href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900', rel='stylesheet')
+      link(href='asset/style.css', rel='stylesheet')
+
+body
+  block body
+  footer.blog-footer.text-center
+    p Powered by 
+      a(href=npmlink) staticpug 
+      | developed by  
+      a(href=authergithubprofile)= author
+  block script
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')

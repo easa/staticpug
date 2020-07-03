@@ -1,0 +1,10 @@
+.card.mb-4.box-shadow
+  .card-header
+    h4.my-0.font-weight-normal= card.title
+  .card-body
+    h1.card-title.pricing-card-title= card.value
+      small.text-muted / mo
+    ul.list-unstyled.mt-3.mb-4
+      each feature in card.features
+        li= feature
+    button.btn.btn-lg.btn-block(type='button', class=card.actionclass)= card.action

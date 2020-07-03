@@ -1,0 +1,5 @@
+header.blog-header.py-3
+  .nav-scroller.py-1.mb-2
+    nav.nav.d-flex.justify-content-between
+    each item in headerContent ? headerContent : ['There are no values']
+      a.p-2.text-muted(href=item.link)= item.title

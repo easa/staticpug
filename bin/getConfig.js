@@ -10,7 +10,7 @@ module.exports = function (argv) {
 
   Array('staticpug.config.json', 'staticpug.json', 'staticpug.config').forEach(i => {
     const tempConfigPath = path.join(basePath, i)
-    if (config && !fs.existsSync(tempConfigPath)) return;
+    if (config || !fs.existsSync(tempConfigPath)) return;
     config = JSON.parse(fs.readFileSync(tempConfigPath, 'utf-8'))
   })
   const packagejsonPath = path.join(basePath, 'package.json')

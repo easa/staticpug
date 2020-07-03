@@ -1,0 +1,28 @@
+body{
+  background-color: #f3f3f3;
+}
+
+table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+table th,
+table td {
+  padding: 5px;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+table thead th {
+  vertical-align: bottom;
+  border-bottom: 1px solid #dee2e6;
+}
+
+table tbody + tbody {
+  border-top: 1px solid #dee2e6;
+}
+
+blockquote{
+  color: orangered;
+}

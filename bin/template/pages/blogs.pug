@@ -1,0 +1,29 @@
+extends /../component/layout/default
+
+append body
+  -
+    var headerContent = [
+      {link:'../', title:'Home Page'},
+      {link:'https://github.com/easa/staticpug/issues/new', title:'Add New Issue'}
+    ]
+
+  .container
+    include /../component/header
+
+  main.container(role='main')
+    .row
+      each article in listOfArticles
+        .pb-3.col-md-8.blog-main.border-bottom
+          img(src=article.titleImage, alt=article.title+' header image', style="height: 200px;")
+          a(href=article.articleLink+'.html')
+            h3= article.articleName
+          .title= article.title
+          .subtitle= article.subtitle 
+          small.font-italic published on 
+            span.font-italic #{article.date} by #{article.author} 
+            img.profile-image(src=article.authorImage, alt="author's image", style="border-radius: 50%;") 
+          div
+            each tag in article.keywords ? article.keywords : ['']
+              span.badge.badge-info= tag 
+              | &nbsp;
+          a(href=article.articleLink) Read more...

@@ -1,0 +1,39 @@
+extends /../component/layout/default
+
+prepend meta
+  -
+    var keywords = article.keywords 
+    var description = article.title
+
+append body
+  -
+    var headerContent = [
+      {link:'../', title:'Home Page'},
+      {link:'index.html', title:'Blog Posts'},
+      {link:'https://github.com/easa/staticpug/issues/new', title:'Add New Issue'}
+    ]
+
+  .container
+    include /../component/header
+
+  main.container(role='main')
+    .row
+      .col-md-8.blog-main.border-bottom
+        h3.pb-3.mb-4.font-italic.border-bottom #{article.title}
+        img(src=article.titleImage, alt=article.title+' header image')
+        .blog-post.border-bottom!= article.content 
+        //- != to unscape the html code in article.content
+
+        each tag in article.keywords 
+          span.badge.badge-info= tag 
+          | &nbsp;
+        .author
+          small.pb-3.mb-4.font-italic Published on #{article.date} by #{article.author} 
+          img.profile-image(src=article.authorImage, alt="author's image" style="border-radius: 50%;")
+
+append style
+  link(rel="stylesheet" href="../assets/css/main.css")
+  link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css')
+append script
+  script(src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js')
+  script(src='../assets/js/main.js')
