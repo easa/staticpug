@@ -1,0 +1,11 @@
+.card.card-post
+  .card-body
+    a.headline(href=link)
+      h5.card-title= title
+    h6.card-subtitle.mb-2.text-muted= subtitle
+    p.card-text!= text
+    if link
+      a.card-link(href=link) read more
+    if bookmark
+      span.card-link(data-action='bookmark', data-id=id) add
+   
