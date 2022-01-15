@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/easa/staticpug#readme",
   "dependencies": {
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "pug": "^3.0.0"
   },
   "devDependencies": {
